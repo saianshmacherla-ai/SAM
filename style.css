@@ -1,0 +1,381 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    text-align: center;
+    color: #1b5e20;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+label {
+    display: block;
+    color: #2e5d34;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c8d8c9;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.25);
+}
+
+button {
+    grid-column: span 2;
+    padding: 15px;
+    margin-top: 8px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1b5e20;
+    transform: translateY(-2px);
+}
+
+/* Prediction result section */
+
+#result {
+    margin-top: 25px;
+    padding: 18px;
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+#result h2 {
+    color: #1b5e20;
+    font-size: 26px;
+    margin: 12px 0;
+}
+
+#result > p {
+    margin-bottom: 10px;
+}
+
+/* Crop description and image layout */
+
+.crop-card {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.crop-info {
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.crop-info h3 {
+    color: #1b5e20;
+    font-size: 18px;
+    margin: 14px 0 8px;
+}
+
+.crop-info p {
+    text-align: left;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Crop image box */
+
+.crop-image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #c8d8c9;
+    border-radius: 14px;
+}
+
+.crop-image {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 550px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: span 1;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .crop-card {
+        grid-template-columns: 1fr;
+    }
+
+    .crop-image-box {
+        min-height: 170px;
+    }
+}
+
+/* Project header */
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px 10px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 14px;
+}
+
+.logo {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 27px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #426b46;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 550px) {
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+}
+/* Prediction History Section */
+
+.history-section {
+    margin-top: 35px;
+    padding: 20px;
+    background: #f1f8e9;
+    border-radius: 12px;
+}
+
+.history-section h2 {
+    color: #1b5e20;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.history-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #2e7d32;
+}
+
+.history-item h3 {
+    color: #1b5e20;
+    margin-bottom: 8px;
+}
+
+.history-item p {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#clearHistoryBtn {
+    background: #c62828;
+    margin-top: 15px;
+}
+
+#clearHistoryBtn:hover {
+    background: #b71c1c;
+}
+/* Weather Information Section */
+
+.weather-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 22px;
+    background: #e3f2fd;
+    border-radius: 12px;
+}
+
+.weather-section h2 {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.weather-section label {
+    color: #1565c0;
+}
+
+.weather-section input {
+    margin-bottom: 12px;
+}
+
+#getWeatherBtn {
+    background: #1976d2;
+}
+
+#getWeatherBtn:hover {
+    background: #0d47a1;
+}
+
+#weatherResult {
+    margin-top: 18px;
+    text-align: center;
+    color: #174a75;
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* Prediction Confidence */
+
+.confidence-bar {
+    width: 100%;
+    height: 14px;
+    background: #dcedc8;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: #2e7d32;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+/* Dark Mode */
+
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background: #1e1e1e;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+    color: #ffffff;
+}
+
+body.dark-mode input {
+    background: #2c2c2c;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode .history-section {
+    background: #263238;
+}
+
+body.dark-mode .history-item {
+    background: #333333;
+    color: white;
+}
+
+body.dark-mode .weather-section {
+    background: #263238;
+}
+
+body.dark-mode #weatherResult {
+    color: white;
+}
+
+body.dark-mode .crop-card {
+    background: #2c2c2c;
+}
+
+body.dark-mode .confidence-bar {
+    background: #444444;
+}
