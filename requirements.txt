@@ -5,5 +5,3 @@ numpy
 pandas
 scikit-learn
 joblib
-To install everything later, run:
-pip install -r requirements.txt
