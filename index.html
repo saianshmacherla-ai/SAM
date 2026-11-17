@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Crop Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🌱</div>
+
+            <h1>AI Crop Recommendation System</h1>
+
+            <p>Smart Farming • Better Decisions • Sustainable Agriculture</p>
+
+            <p>Enter your soil and weather details to discover suitable crops.</p>
+
+            <button type="button" id="themeToggle">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+        <!-- Weather Section -->
+        <div class="weather-section">
+
+            <h2>🌦️ Live Weather Information</h2>
+
+            <p>Check the current weather conditions in your city.</p>
+
+            <label for="weatherCity">Enter City Name</label>
+
+            <input
+                type="text"
+                id="weatherCity"
+                placeholder="Example: Hyderabad"
+            >
+
+            
+            <button type="button" id="getWeatherBtn">
+                Get Weather
+            </button>
+
+            <div id="weatherResult"></div>
+
+        </div>
+
+        <!-- Crop Recommendation Form -->
+        <form id="cropForm">
+
+            <h2>🌾 Soil & Weather Details</h2>
+
+            <p>Enter the required values for crop prediction.</p>
+
+            <label for="N">Nitrogen (N)</label>
+            <input
+                type="number"
+                id="N"
+                min="0"
+                step="any"
+                placeholder="Enter nitrogen value"
+                required
+            >
+
+            <label for="P">Phosphorus (P)</label>
+            <input
+                type="number"
+                id="P"
+                min="0"
+                step="any"
+                placeholder="Enter phosphorus value"
+                required
+            >
+
+            <label for="K">Potassium (K)</label>
+            <input
+                type="number"
+                id="K"
+                min="0"
+                step="any"
+                placeholder="Enter potassium value"
+                required
+            >
+
+            <label for="temperature">Temperature (°C)</label>
+            <input
+                type="number"
+                id="temperature"
+                step="any"
+                placeholder="Enter temperature"
+                required
+            >
+
+            <label for="humidity">Humidity (%)</label>
+            <input
+                type="number"
+                id="humidity"
+                min="0"
+                max="100"
+                step="any"
+                placeholder="Enter humidity"
+                required
+            >
+
+            <label for="ph">Soil pH</label>
+            <input
+                type="number"
+                id="ph"
+                min="0"
+                max="14"
+                step="any"
+                placeholder="Enter soil pH"
+                required
+            >
+
+            <label for="rainfall">Rainfall (mm)</label>
+            <input
+                type="number"
+                id="rainfall"
+                min="0"
+                step="any"
+                placeholder="Enter rainfall"
+                required
+            >
+
+            <button type="submit">
+                🌱 Recommend Crop
+            </button>
+
+            <button type="button" id="resetBtn">
+                Reset
+            </button>
+
+        </form>
+
+        <!-- Prediction Result -->
+        <div id="result"></div>
+
+        <!-- Prediction History -->
+        <div class="history-section">
+
+            <h2>📋 Prediction History</h2>
+
+            <p>View your previously recommended crops.</p>
+
+            <div id="history"></div>
+
+            <button type="button" id="clearHistoryBtn">
+                Clear History
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
